@@ -1,0 +1,46 @@
+[project]
+name = "jl_transforms"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [
+  { name = "Alexey Rebrikov", email = "rebrikov.av@phystech.edu" }
+]
+dependencies = []
+requires-python = "^3.13"
+
+[tool.poetry]
+packages = [
+    { include = "jl_transforms" }
+]
+
+[tool.poetry.dependencies]
+torch = "^2.7.0"
+hydra-core = "^1.3.2"
+wandb = "^0.19.10"
+numpy = "^2.2.5"
+torchvision = "^0.22.0"
+tqdm = "^4.67.1"
+catalyst = "^22.4"
+matplotlib = "^3.10.1"
+seaborn = "^0.13.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+flake8 = "^7.2.0"
+mypy = "^1.15.0"
+pre-commit = "^4.2.0"
+wemake-python-styleguide = "^1.1.0"
+commitizen = "^4.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"

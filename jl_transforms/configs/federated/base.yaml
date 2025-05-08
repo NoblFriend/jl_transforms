@@ -1,0 +1,13 @@
+num_clients: 5
+num_rounds: 10
+batch_size: 64
+lr: 0.01
+momentum: 0.9
+lambda_reg: 1.0
+data:
+  root: "./data"
+  split_mode: "dirichlet"
+  alpha: 0.5
+wandb:
+  project: "jl_transforms"
+  group: "homogeneous"
