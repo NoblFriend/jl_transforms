@@ -4,8 +4,8 @@ from omegaconf import DictConfig
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms  # type: ignore[import]
 
-from jl_transforms.data.distribution import generate_distribution_matrix
-from jl_transforms.data.splitter import apply_matrix_to_dataset
+from jl_transforms.data_loader.distribution import generate_distribution_matrix
+from jl_transforms.data_loader.splitter import apply_matrix_to_dataset
 from jl_transforms.misc import log_class_client_heatmap
 
 

@@ -6,7 +6,7 @@ from torch import nn as nn
 from tqdm import tqdm  # type: ignore[import]
 
 import wandb
-from jl_transforms.data.data import get_client_loaders
+from jl_transforms.data_loader.data import get_client_loaders
 from jl_transforms.misc import average_weights, local_epoch_fn
 from jl_transforms.models import get_resnet18_cifar
 
