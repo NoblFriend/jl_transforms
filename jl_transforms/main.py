@@ -19,6 +19,7 @@ def train_client(  # noqa: WPS211
         output_key="logits",
         target_key="targets",
         loss_key="loss",
+        engine=dl.GPUEngine(),
     )
 
     def loss_fn(logits, targets):  # noqa: WPS430
