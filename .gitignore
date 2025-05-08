@@ -40,11 +40,11 @@ venv/
 .vscode/
 
 # Wandb logs
-wandb/
+/wandb/
 
 # Hydra outputs
 outputs/
 multirun/
 
 # Data
-data/
+/data/

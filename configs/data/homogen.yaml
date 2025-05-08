@@ -1,0 +1,3 @@
+root: "./data"
+num_classes: 10
+split_mode: "uniform"

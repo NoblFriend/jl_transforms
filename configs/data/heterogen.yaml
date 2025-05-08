@@ -1,0 +1,4 @@
+root: "./data"
+num_classes: 10
+split_mode: "dirichlet"
+alpha: 0.5
