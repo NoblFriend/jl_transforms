@@ -1,15 +1,26 @@
+import copy
 import os
 import random
 
 import numpy as np
 import seaborn as sns  # type: ignore[import]
 import torch
-import wandb  # type: ignore[import]
 from matplotlib import pyplot as plt  # type: ignore[import]
+
+import wandb  # type: ignore[import]
 
 
 def local_epoch_fn(round_idx: int) -> int:
     return 4 * (round_idx + 1)
+
+
+def average_weights(weights_list):
+    avg = copy.deepcopy(weights_list[0])
+    for key in avg:
+        for weight in weights_list[1:]:
+            avg[key] += weight[key]
+        avg[key] /= len(weights_list)
+    return avg
 
 
 def set_global_seed(seed: int) -> None:
@@ -30,7 +41,7 @@ def log_class_client_heatmap(
     fname = f"plots/{prefix}_heatmap.png"
 
     plt.figure(figsize=(10, 6))
-    ax = sns.heatmap(table, annot=True, fmt="d", cmap="YlGnBu", cbar=True)
+    ax = sns.heatmap(table, annot=True, fmt=".2f", cmap="YlGnBu", cbar=True)
     ax.set_title(
         "Class-Client Distribution (mode={})".format(cfg.data.split_mode)
     )
