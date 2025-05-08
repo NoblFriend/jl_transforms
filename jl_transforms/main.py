@@ -76,8 +76,8 @@ def main(cfg: DictConfig):  # noqa: WPS210
     momentum = cfg.train.momentum
     num_rounds = cfg.train.num_rounds
 
-    client_models = [get_resnet18_cifar() for _ in range(num_clients)]
-    global_model = get_resnet18_cifar()
+    client_models = [get_resnet18_cifar().cpu() for _ in range(num_clients)]
+    global_model = get_resnet18_cifar().cpu()
     global_weights = global_model.state_dict()
 
     round_bar = tqdm(range(num_rounds), desc="📦 Communication Rounds")
