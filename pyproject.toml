@@ -6,7 +6,6 @@ readme = "README.md"
 authors = [
   { name = "Alexey Rebrikov", email = "rebrikov.av@phystech.edu" }
 ]
-dependencies = []
 requires-python = "^3.13"
 
 [tool.poetry]
@@ -21,8 +20,7 @@ wandb = "^0.19.10"
 numpy = "^2.2.5"
 torchvision = "^0.22.0"
 tqdm = "^4.67.1"
-catalyst = "^22.4"
-matplotlib = "^3.10.1"
+torchmetrics = "^1.7.1"
 seaborn = "^0.13.2"
 
 [tool.poetry.group.dev.dependencies]
